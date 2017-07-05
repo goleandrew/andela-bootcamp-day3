@@ -1,11 +1,12 @@
 function words(str) {
+  
+    var result = {};
+    // split on whitespace, including newline
+    str.split(/[\s]+/).forEach(function(word) {
+    result[word] = (+result[word] || 0) + 1;
 
-  var result={};
-
-  str.split(" ").forEach(function(el,i,arr){
-    result[el] =  result[el]? ++result[el]: 1;
-  });
-  return result;
+    });
+    return result;
   
 }
 console.log(words("twinkle twinkle little star"));
