@@ -15,12 +15,12 @@ def fetch_data(fetch_url, todo_id):
 
 def main():
 	print("\n\t|   Python HTTP Command line Application  |\n\t%s\n" %("-"*44))
-	print("This command line application fetches data from 'jsonplaceholder.typicode.com', a \nfree online REST service that you can use whenever you need some fake data.\n\n")
+	print("This command line application fetches data from 'jsonplaceholder.typicode.com', a \nfree online REST service that you can use whenever you need some test data.\n\n")
 
 	url = "https://jsonplaceholder.typicode.com/todos/"
 
 	todo_id = raw_input("Enter a To-do with ID between 1 and 200: ")
-	print("\n\tGetting To-do List with ID number "+todo_id + "\n")
+	print("\n\tGetting To-do List with ID number "+ todo_id + "\n")
 	get_response = fetch_data(url,todo_id)
 	print("\tTo-do List Details\n\t%s\n%s\n\tStatus code\n\t%s\n%s\n" % 
 		("-"*17,get_response.text, "-"*11, get_response.status_code))

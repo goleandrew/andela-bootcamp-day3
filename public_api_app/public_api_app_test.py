@@ -11,7 +11,7 @@ class HTTPAPITest(unittest.TestCase):
 		should return '* Nothing to show *' if
 		input is not within 1 and 200
 		"""
-		self.assertEqual("* Nothing to show *",
+		self.assertEqual("no data",
 			fetch_data(self.url, "201"))
 
 	def test_get_raises_value_error_for_non_int(self):
