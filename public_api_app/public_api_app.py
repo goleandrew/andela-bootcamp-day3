@@ -19,11 +19,11 @@ def main():
 
 	url = "https://jsonplaceholder.typicode.com/todos/"
 
-	post_id = raw_input("Enter a To-do with ID between 1 and 200: ")
-	print("\n\tGetting To-do List with ID number "+post_id + "\n")
-	get_r = fetch_data(url,post_id)
+	todo_id = raw_input("Enter a To-do with ID between 1 and 200: ")
+	print("\n\tGetting To-do List with ID number "+todo_id + "\n")
+	get_response = fetch_data(url,todo_id)
 	print("\tTo-do List Details\n\t%s\n%s\n\tStatus code\n\t%s\n%s\n" % 
-		("-"*17,get_r.text, "-"*11, get_r.status_code))
+		("-"*17,get_response.text, "-"*11, get_response.status_code))
 
 if __name__ == '__main__':
 	main()
